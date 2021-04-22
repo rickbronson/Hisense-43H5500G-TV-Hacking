@@ -22,7 +22,7 @@ The bottom of the Mainboard
 The top of the Mainboard
 ![MB-top2](https://github.com/rickbronson/Hisense-43H5500G-TV-Hacking/blob/master/docs/hardware/MB-top2.png "MB-top")
 
-The top of the Mainboard with the giant heatsink that covers the CPU.
+The top of the Mainboard with the giant heatsink that covers the CPU removed.
 ![MB-hisense.jpg](https://github.com/rickbronson/Hisense-43H5500G-TV-Hacking/blob/master/docs/hardware/MB-hisense.jpg "MB-hisense.jpg")
 
 The CPU with heatsink removed.

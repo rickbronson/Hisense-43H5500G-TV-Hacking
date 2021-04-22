@@ -1,0 +1,256 @@
+AC_ON
+2L-SM-20170623
+U03
+MIU1_DQS-OK
+BIST0-OK
+BIST1-OK
+*optee teeloader entry
+CusConfig
+eMMC_RPMB_Check_Program_Key
+*ree_opt=00000023
+Auth reeloader...
+Decrypt reeloader...
+reeloader_addr=20100000
+NOTICE:  BL3-1: v1.1(debug):d05f3b9bea
+NOTICE:  BL3-1: Built : 10:53:13, Apr 25 2020
+INFO:    warmboot return address : 3e301c00
+INFO:    BL3-1: Initializing runtime services
+NOTICE:  From args : boot_mbx = 200275cc 
+INFO:     [Booting] mstar_send_magic_ATF 460 
+INFO:    BL3-1: Initializing BL3-2
+[Ramlog] ramlog_init init success
+
+INFO:    BL3-1: Preparing for EL3 exit to normal world
+INFO:    BL3-1: Next image address = 0x20100000
+INFO:    BL3-1: Next image spsr = 0x1d3
+INFO:    BIN1_32bit mode Apr 25 2020 10:53:05
+INFO:    R1 0
+INFO:    R2 0
+INFO:    R3 0
+ree_entry
+cum
+MTK_LDR
+U[LDR_SysInit][300]Hardware Initialization
+[LDR_SysInit][302]MsOS Initialization
+[LDR_SysInit][304]MIU Initialization
+[Utopia][MIU]: [MIU INFO] miu open
+create instance at p with private size 545791344 bytes at p
+[LDR_SysInit][307]MMIO Initialization
+[LDR_SysInit][309]SEM Initialization
+[LDR_SysInit][313]SYS Initialization
+[Utopia][SYS]: Function = SYSOpen, Line = 1655, current resource pri_shm content is: 0
+[Utopia][SYS]: Function = SYSOpen, Line = 1674, [SYS INFO] OPEN INSTANCE...
+create instance at p with private size 545791584 bytes at p
+[LDR_SysInit][316]Enable Interrupt
+[LDR_SysInit][320]Start Timer
+[SetMiu][270]CONFIG_MIU0_GROUP_PRIORITY = 1:0:2:3
+[SetMiu][271]CONFIG_MIU1_GROUP_PRIORITY = 1:0:2:3
+[SetMiu][272]CONFIG_MIU0_GROUP_SELMIU = 1004:0024:0000:0000:005F:0000
+[SetMiu][273]CONFIG_MIU1_GROUP_SELMIU = 4F6A:3FD1:0000:0000:0000:FEEF
+[MDrv_MIU_SetGroupPriority_UBoot][274]IN
+[MDrv_MIU_SetGroupPriority_UBoot][309]OK
+[MDrv_MIU_SetGroupPriority_UBoot][274]IN
+[MDrv_MIU_SetGroupPriority_UBoot][309]OK
+[MDrv_MIU_SelectMIU_UBoot][320]IN
+[MDrv_MIU_SelectMIU_UBoot][323]OK
+[MDrv_MIU_SelectMIU_UBoot][320]IN
+[MDrv_MIU_SelectMIU_UBoot][323]OK
+[LDR_SysInit][326]Initialize BDMA
+create instance at p with private size 545791776 bytes at p
+[LDR_SysInit][334]Initialize eMMC
+
+eMMC: HS400 200MHz 
+eMMC 7.28 GB [E8FFF8h]
+[LDR_SysInit][349]Hardware Initialization Completed
+
+[CALDR_Entry][103]Hello CALDR_Entry-Begin
+MTKLoader v21: 20190504
+
+Do USB upgrade ...
+
+[EHCI] Ver.20190516 ehci init++
+[EHCI] bus base miu0: 0x0, miu1: 0x80000000
+[EHCI] qh_buf: 0x2051a080(0x6051a080) qh size: 64
+[EHCI] qtd_buf: 0x2051c080(0x6051c080), qtd size: 32
+[EHCI] ehci 0 init++
+[EHCI] controller: 0x208923d0
+ehc_base: 0x1f204800, utmi_base: 0x1f207500, usbc_base: 0x1f200e00
+[USB] config miu select [70] [f8] [ef] ][ef]
+[USB] enable miu lower bound address subtraction
+[USB] init squelch level 0x2
+[EHCI] ehci 0 init--
+[EHCI] ehci 1 init++
+[EHCI] controller: 0x208a2a30
+ehc_base: 0x1f201a00, utmi_base: 0x1f207400, usbc_base: 0x1f200f00
+[USB] config miu select [70] [f8] [ef] ][ef]
+[USB] enable miu lower bound address subtraction
+[USB] init squelch level 0x2
+[EHCI] ehci 1 init--
+[EHCI] ehci 2 init++
+[EHCI] controller: 0x208b3090
+ehc_base: 0x1f227200, utmi_base: 0x1f221d00, usbc_base: 0x1f227000
+[USB] config miu select [70] [f8] [ef] ][ef]
+[USB] enable miu lower bound address subtraction
+[USB] init squelch level 0x2
+[EHCI] ehci 2 init--
+[EHCI] ehci init--
+Musb3_init OK ++
+[yl] usb_poll for controller: 0x208b3090
+[yl] usb_poll loop:0, controller->devices[0]:0x208b3300
+[EHCI] ehci 2 root portsc: 0x803
+highspeed device
+* found device (0x0e8d:0x7668, USB 2.1, MPS0: 64)
+device has 1 configurations
+device has 3 interfaces
+NOTICE: Your device has multiple interfaces and
+this driver will only use the first one. That may
+be the wrong choice and cause the device to not
+work correctly. Please report this case
+(including the above debugging output) to
+coreboot@coreboot.org to have the device added to
+the list of well-known quirks.
+Interface 0: class 0xe0, sub 0x1. proto 0x1
+Class: unsupported class ef
+usb set_address ok;device address := 1
+Detaching device not used by payload
+[yl] usb_poll for controller: 0x208a2a30
+[yl] usb_poll loop:0, controller->devices[0]:0x208a2ca0
+[EHCI] ehci 1 root portsc: 0x803
+highspeed device
+* found device (0x054c:0x0243, USB 2.0, MPS0: 64)
+device has 1 configurations
+device has 1 interfaces
+Interface 0: class 0x8, sub 0x6. proto 0x50
+Class: MSC
+usb set_address ok;device address := 1
+  it uses SCSI transparent command set
+  it uses Bulk-Only Transport protocol
+  using endpoint 81 as in, 2 as out
+  has 1 luns
+  Waiting for device to become ready....ok.
+Reading capacity of mass storage device.
+  7831552 512-byte sectors (4009 MB)
+usb_msc_init OK
+[yl] usb_poll loop:1, controller->devices[1]:0x208c36f0
+  Waiting for device to become ready...ok.
+Reading capacity of mass storage device.
+  7831552 512-byte sectors (4009 MB)
+Find msc device
+
+Find USB device on U3 port.
+
+
+No EMMC OAD flag.
+
+Wait USB medium to be mounted...
+/dev is created.
+/mnt is already existed, That is OK.
+/dev/usb is created.
+{x_fm_parse_drive 3904} ui4_sec_size=512, ui4_align_bytes=64.
+{x_fm_parse_drive 4200} it is not mbr.
+/mnt/usb_0 is created.
+/dev/usb_0 is mounted as /mnt/usb_0.
+Upgrade File Name: upgrade.pkg
+Upgrade File Size: 0x0000000000000000 Bytes
+Msdc Erase Unit: 0x80000.
+##########RSA public key######
+73 3e 8d 9b 65 39 d7 aa 94 45 12 b1 c6 87 2e d2    s>..e9...E......
+64 c2 93 76 0b 59 da bf be 16 b4 63 0e 09 1a 07    d..v.Y.....c....
+23 b0 7e 25 80 ac e6 f6 de 01 89 8f d7 72 c5 95    #.~%.........r..
+c4 ac 20 f8 52 91 f5 06 ad 9b ee 46 f0 a7 f6 de    ....R......F....
+be fd 6e 06 12 6e 3e 38 32 a1 b6 87 8b 0d 0f 25    ..n..n>82......%
+71 98 e6 b7 42 84 24 9c 09 03 59 48 7c e5 e9 7a    q...B.$...YH|..z
+7c 59 6c 4d 3f fa d7 af ec 45 a6 f2 e3 60 3c d1    |YlM?....E...`<.
+da 5c 25 f0 78 6a ed ac 23 de 5a a7 7b 1a 2e 88    .\%.xj..#.Z.{...
+ce 97 a0 f6 95 c3 14 65 a9 c0 51 e3 89 b1 28 02    .......e..Q...(.
+26 dd 67 77 89 54 af b8 31 d1 4b 5b 09 7a 55 21    &.gw.T..1.K[.zU!
+fb 34 7d 6e 74 1b 52 f5 5f 5b 77 38 df d6 20 fd    .4}nt.R._[w8....
+2b 22 b7 53 26 43 a1 89 d9 5a ec 81 5b 80 c8 2f    +".S&C...Z..[../
+da 43 eb ef 56 48 03 4a 9d 8e 2d 81 8b f4 fe b1    .C..VH.J..-.....
+c3 22 bf 23 8e b1 3f b5 7d 6c d5 58 ea 08 84 43    .".#..?.}l.X...C
+56 23 fd 7c 85 4d 74 ed 58 81 1a 70 34 cc 4d af    V#.|.Mt.X..p4.M.
+66 fd 85 e1 bd ab 52 8d 5b 95 df 7f b3 f0 0c a6    f.....R.[.......
+
+##########aes key######
+55 55 55 55 55 55 55 55 55 55 55 55 55 55 55 55    UUUUUUUUUUUUUUUU
+
+##########AES Key######
+b1 bf aa 40 7f 70 c8 0c 65 03 79 df ea fa a4 0f    ...@.p..e.y.....
+
+upgrade led(gpio) period = 1000ms
+create instance at p with private size 546262736 bytes at p
+
+MsDrv_PNL_Init:Bypass SetDivison 
+TCON VERSION 3 
+[MApi_PNL_TCONMAP_DumpTable_U2][2927][7]TCON VERSION 3 
+MDrv_PNL_Init u32PnlRiuBaseAddr = tx
+MDrv_PNL_Init u32PMRiuBaseAddr = tx
+LINK TYPE = EXT 
+[SYS] Unknown query!
+[MApi_XC_MLG_GetStatus, 2979]No instance existed, please get an instance by calling MApi_XC_Init() first
+LINK TYPE = EXT 
+create instance at p with private size 546262816 bytes at p
+[XC,Version] 
+ TCON VERSION 3 
+[MApi_PNL_TCONMAP_DumpTable_U2][2927][0]TCON VERSION 3 
+[MApi_PNL_TCONMAP_DumpTable_U2][2927][1]TCON VERSION 3 
+[MApi_PNL_TCONMAP_DumpTable_U2][2927][2]TCON VERSION 3 
+[MApi_PNL_TCONMAP_DumpTable_U2][2927][3]TCON VERSION 3 
+[MApi_PNL_TCONMAP_DumpTable_U2][2927][7]TCON VERSION 3 
+[MApi_PNL_TCONMAP_DumpTable_U2][2927][5]TCON VERSION 3 
+
+---MsDrv_PNL_BackLigth_On:1326 Set MsDrv_PNL_BackLigth_On DelayTask 500 
+simple_strtoull187: result = 0x1de20000
+simple_strtoull187: result = 0x1de20000
+simple_strtoull187: result = 0x400000
+[do_create_osdlayer] GOP Boot Logo Index 1 
+create instance at p with private size 546262320 bytes at p
+[Utopia][GE HAL]: [GE_Init][1057]VCmdQSize = 0xtx < GE_VCMDQ_SIZE_MIN = 0xtx
+create instance at p with private size 546262400 bytes at p
+create instance at p with private size 546260576 bytes at p
+<<set_mirror H ON!!>> 
+MsDrvGOP_Show:422:dst_info.u32Width=0x2d0
+MsDrvGOP_Show:423:dst_info.u32Pitch=0x5a0
+MsDrvGOP_Show:424:bytespp=0x2
+MsDrvGOP_Show:425:u32Width=0x2d0
+MsDrvGOP_Show:426:u32WordUnit=0x20
+[Utopia][GE HAL]: [GE] Wait command queue: 0 : 0, 1
+[Utopia][GE HAL]: [GE] Wait Idle: 0 : 10
+Use internal integrity check API
+open File = /mnt/usb_0/upgrade.pkg
+Read data from file failed(-13)
+Read file /mnt/usb_0/upgrade.pkg header failed
+Locate codefile header failed - /mnt/usb_0/upgrade.pkg
+[Utopia][GE HAL]: [GE] Wait command queue: 0 : 0, 1
+[Utopia][GE HAL]: [GE] Wait Idle: 0 : 10
+No proper firmware exist, 
+Error: USB upgrade fail.
+USB/EMMC upgrade stop !
+** part_emmc_read_ddb: SKIP Driver Descript Block check
+[LoadCustomerKeyBank][244]u32CKBStart=0x20108000!
+[Jump2Uboot][123]Jump2Uboot-Begin
+create instance at p with private size 546260656 bytes at p
+UBOOT AUTH_OK
+[disable_cache][130]Disable Cache
+[LDR_JumpToApp][159]Jump To 0x28400000
+
+Relocation Offset is: 01A00000
+[AT][MB][start ub][4474]
+
+U-Boot 2011.06 (Apr 10 2020 - 10:41:19) 
+
+[Mboot] ===== sw IR Config Register ===== 
+[Mboot] ===== Attach IR Interrupt  ======
+[Utopia][SYS]: Function = SYSOpen, Line = 1655, current resource pri_shm content is: 0
+[Utopia][SYS]: Function = SYSOpen, Line = 1674, [SYS INFO] OPEN INSTANCE...
+create instance at 28FF9360 with private size 108 bytes at 28FF93B0
+[Utopia][MIU]: [MIU INFO] miu opencreate instance at 28FF9420 with private size 156 bytes at 28FF9470
+[Utopia][MIU]: 	[MDrv_MIU_SetIOMapBase][188][Utopia][MIU]: Get IOMap MS_MODULE_EXTRIU failurecreate instance at 28FF9510 with private size 60 bytes at 28FF9560
+
+uboot held at [28DDDF60~2A800000],size=01A220A0
+Uboot Relocation:  168 MiB
+Now running in RAM - U-Boot at: 29E00000
+
+eMMC: HS400 200MHz
+eMMC 7.28 GB 
+DRAM : 512MB x 512MB
